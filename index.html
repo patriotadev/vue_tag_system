@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Tag System</title>
+</head>
+<body>
+
+<div id="app">
+
+    <h1>Vue.JS Tag System</h1>
+
+    <input type="text" name="tags" v-model="tags_temp">
+
+
+    <div id="tag_form">
+
+        <span id="tag_temp_wrapper">
+            <span class="tag_temp" v-for="tag_temp in tags_temp">
+                {{tag_temp}}
+                <span class="close_tag_temp" @click="removeTag(tag_temp)">X</span>
+            </span>
+        </span>
+
+        <input type="text" id="tag_input" @keyup="showList()" @keyup.down="filterDown()" @keyup.up="filterUp()" @keyup.enter="addTag()" @keyup.delete="removeTag()" v-model="keyword">
+
+    </div>
+
+    <ul id="tag_lists" v-bind:class="{hidden: isHidden}">
+        <li class="tags" v-for="tag in filterTags">{{tag}}</li>
+    </ul>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="App.js"></script>
+</body>
+</html>

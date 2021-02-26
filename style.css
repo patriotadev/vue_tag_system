@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  margin: 10% auto;
+  width: 80%;
+}
+
+input:focus {
+  outline: none;
+}
+
+#tag_temp_wrapper,
+.tag_temp,
+#tag_form {
+  display: flex;
+}
+
+#tag_form {
+  border: 1px solid black;
+  height: 30px;
+}
+
+#tag_input {
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#tag_lists {
+  list-style: none;
+  padding-left: 5px;
+  border: 1px solid black;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: salmon;
+  color: white;
+}
+
+.tag_temp {
+  background-color: salmon;
+  color: white;
+  padding: 2px 4px;
+  margin: 2px;
+}
+
+.close_tag_temp {
+  background: seashell;
+  color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+  line-height: 12px;
+}
